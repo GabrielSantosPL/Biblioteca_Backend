@@ -50,6 +50,7 @@ public class livroService {
         oldLiv.setCategoria(newLiv.getCategoria());
         oldLiv.setIsbn(newLiv.getIsbn());
         oldLiv.setAno_publicacao(newLiv.getAno_publicacao());
+        oldLiv.setAutor(newLiv.getAutor());
 
         return livRep.save(oldLiv);
 
