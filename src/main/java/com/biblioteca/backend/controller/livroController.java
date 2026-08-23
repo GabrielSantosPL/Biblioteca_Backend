@@ -39,20 +39,6 @@ public class livroController {
 
     }
 
-    @GetMapping("/categoria/{id}")
-    public List<livro> listCategoria(@PathVariable int id){
-
-        return livSer.listCategoria(id);
-
-    }
-
-    @GetMapping("/autor/{id}")
-    public List<livro> listAutor(@PathVariable long id){
-
-        return livSer.listAutor(id);
-
-    }
-
     @PostMapping
     public livro create(@RequestBody livro liv){
 

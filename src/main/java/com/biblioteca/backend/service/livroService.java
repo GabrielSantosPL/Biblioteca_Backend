@@ -3,10 +3,12 @@ package com.biblioteca.backend.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.biblioteca.backend.model.livro;
 import com.biblioteca.backend.repository.livroRepository;
 
+@Service
 public class livroService {
 
     @Autowired
@@ -15,18 +17,6 @@ public class livroService {
     public List<livro> listAll(){
 
         return livRep.findAll();
-
-    }
-
-    public List<livro> listCategoria(int id){
-
-        return livRep.findByCategoriaId(id);
-
-    }
-
-    public List<livro> listAutor(Long id){
-
-        return livRep.findByAutorId(id);
 
     }
 
