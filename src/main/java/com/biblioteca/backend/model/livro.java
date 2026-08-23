@@ -28,19 +28,11 @@ public class livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
-    @JoinColumn(name = "id_categoria")
-    private categoria categoria;
+    private String categoria;
     private String titulo;
     @Column(name = "isbn", nullable= false, unique = true, length = 20)
     private String isbn;
     private int ano_publicacao;
+    private String autor;
 
-    @ManyToMany
-    @JoinTable(
-        name = "livro_autor",
-        joinColumns = @JoinColumn(name = "id_livro"),
-        inverseJoinColumns = @JoinColumn(name = "id_autor")
-    )
-    private List<autor> autores = new ArrayList<>();
 }
