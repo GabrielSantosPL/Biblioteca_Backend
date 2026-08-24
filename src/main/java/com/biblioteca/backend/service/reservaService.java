@@ -3,10 +3,12 @@ package com.biblioteca.backend.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.biblioteca.backend.model.reserva;
 import com.biblioteca.backend.repository.reservaRepository;
 
+@Service
 public class reservaService {
     
     @Autowired
